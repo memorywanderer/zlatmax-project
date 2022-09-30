@@ -1,0 +1,38 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-block;
+	cursor: pointer;
+	padding: rem(8) rem(48);
+	background-color: $mainOrange;
+	box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.43);
+	border-radius: 3px;
+	text-align: center;
+	line-height: math.div(32, 20);
+	color: #fff;
+	transition: box-shadow 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.63);
+		}
+	}
+
+	&_black {
+		height: 50px;
+		background-color: #000;
+		color: #fff;
+		box-shadow: none;
+		transition: all 0.3s;
+		@include adaptiveValue("font-size", 18, 16);
+
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+				box-shadow: none;
+			}
+		}
+	}
+}
